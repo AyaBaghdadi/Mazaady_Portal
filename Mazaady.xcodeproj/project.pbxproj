@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A5018D3B2D44EDC0E466D870 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC813B96397322401139A3C6 /* Pods_Mazaady.framework */; };
+		BAE1F8342DABF55A00B229BE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BAE1F8332DABF55400B229BE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC813B96397322401139A3C6 /* Pods_Mazaady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B548FA603690097226A24208 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 		BA356C562DAA776600142178 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE1F8332DABF55400B229BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F89556DD87913B252B6CE2F6 /* Pods-Mazaady.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.release.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 		BA356C4D2DAA776600142178 = {
 			isa = PBXGroup;
 			children = (
+				BAE1F8332DABF55400B229BE /* README.md */,
 				BA356C582DAA776600142178 /* Mazaady */,
 				BA356C572DAA776600142178 /* Products */,
 				47651E1397FA98E5433F9BF2 /* Pods */,
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE1F8342DABF55A00B229BE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
