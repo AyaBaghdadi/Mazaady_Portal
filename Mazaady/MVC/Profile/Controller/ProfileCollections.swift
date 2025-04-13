@@ -64,10 +64,8 @@ extension ProfileVC : UICollectionViewDataSource , UICollectionViewDelegate , UI
             cell.offerPriceCell.text = "\(product.price)"
             if product.offer == nil {
                 cell.offerViewCell.isHidden = true
-                cell.normalPriceViewCell.isHidden = false
             }else{
                 cell.offerViewCell.isHidden = false
-                cell.normalPriceViewCell.isHidden = true
             }
 
             if let remainingSeconds = product.endDate {
@@ -113,17 +111,6 @@ extension ProfileVC : UICollectionViewDataSource , UICollectionViewDelegate , UI
             return CGSize(width: itemWidth, height: ad_height)
 
         } else if collectionView == collectionViewTopTags {
-            
-//            let tag = tagsArray[indexPath.item]  //  Tag object
-//            let tagText = tag.name as NSString   // convert to NSString for size calculation
-//
-//            let font = UIFont.systemFont(ofSize: 14, weight: .medium)
-//            let size = tagText.size(withAttributes: [.font: font])
-//
-//            let padding: CGFloat = 32
-//            let height: CGFloat = 32
-//
-//            return CGSize(width: size.width + padding, height: height)
             
             let itemWidth = collectionView.bounds.width / 3 - 8
             return CGSize(width: itemWidth, height: 100)

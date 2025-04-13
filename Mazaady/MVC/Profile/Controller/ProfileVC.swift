@@ -29,7 +29,7 @@ class ProfileVC: UIViewController {
 
     var advertisementsArray: [Advertisement] = []
     var ad_height = 190.0
-    var product_height = 230.0
+    var product_height = 280.0
     var tagsArray: [Tag] = []
     var productsArray: [Product] = []
     var filteredProductsArray: [Product] = []
