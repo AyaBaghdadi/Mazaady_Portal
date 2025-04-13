@@ -28,7 +28,11 @@ class UnderlineSegmentedControl: UISegmentedControl {
 
     private func setupStyle() {
         backgroundColor = .clear
-        selectedSegmentTintColor = .clear
+        if #available(iOS 13.0, *) {
+            selectedSegmentTintColor = .clear
+        } else {
+            // Fallback on earlier versions
+        }
 
         // Remove system background & divider images
         setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)

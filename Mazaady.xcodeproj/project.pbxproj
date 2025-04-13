@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A5018D3B2D44EDC0E466D870 /* Pods_Mazaady.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC813B96397322401139A3C6 /* Pods_Mazaady.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		AC813B96397322401139A3C6 /* Pods_Mazaady.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mazaady.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B548FA603690097226A24208 /* Pods-Mazaady.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.debug.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.debug.xcconfig"; sourceTree = "<group>"; };
 		BA356C562DAA776600142178 /* Mazaady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazaady.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89556DD87913B252B6CE2F6 /* Pods-Mazaady.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mazaady.release.xcconfig"; path = "Target Support Files/Pods-Mazaady/Pods-Mazaady.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5018D3B2D44EDC0E466D870 /* Pods_Mazaady.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06E7CF5DC20B6C0D8DA1E821 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC813B96397322401139A3C6 /* Pods_Mazaady.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47651E1397FA98E5433F9BF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B548FA603690097226A24208 /* Pods-Mazaady.debug.xcconfig */,
+				F89556DD87913B252B6CE2F6 /* Pods-Mazaady.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA356C4D2DAA776600142178 = {
 			isa = PBXGroup;
 			children = (
 				BA356C582DAA776600142178 /* Mazaady */,
 				BA356C572DAA776600142178 /* Products */,
+				47651E1397FA98E5433F9BF2 /* Pods */,
+				06E7CF5DC20B6C0D8DA1E821 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA356C692DAA776900142178 /* Build configuration list for PBXNativeTarget "Mazaady" */;
 			buildPhases = (
+				DA0765B20D737C070441EC4B /* [CP] Check Pods Manifest.lock */,
 				BA356C522DAA776600142178 /* Sources */,
 				BA356C532DAA776600142178 /* Frameworks */,
 				BA356C542DAA776600142178 /* Resources */,
+				1EA59CD4E8B63FFAB8DD9462 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				BA356C582DAA776600142178 /* Mazaady */,
 			);
 			name = Mazaady;
-			packageProductDependencies = (
-			);
 			productName = Mazaady;
 			productReference = BA356C562DAA776600142178 /* Mazaady.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EA59CD4E8B63FFAB8DD9462 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mazaady/Pods-Mazaady-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0765B20D737C070441EC4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mazaady-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA356C522DAA776600142178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,19 +209,21 @@
 /* Begin XCBuildConfiguration section */
 		BA356C6A2DAA776900142178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B548FA603690097226A24208 /* Pods-Mazaady.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q43TGWBPG;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mazaady/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -168,19 +239,21 @@
 		};
 		BA356C6B2DAA776900142178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89556DD87913B252B6CE2F6 /* Pods-Mazaady.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q43TGWBPG;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mazaady/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
