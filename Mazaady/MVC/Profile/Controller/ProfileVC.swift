@@ -19,6 +19,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var customerMailLbl: UILabel!
     @IBOutlet weak var customerAddressLbl: UILabel!
     
+    @IBOutlet weak var productsHeight: NSLayoutConstraint!
     @IBOutlet weak var adsHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionViewProducts: UICollectionView!
     @IBOutlet weak var collectionViewTopTags: UICollectionView!
@@ -28,8 +29,11 @@ class ProfileVC: UIViewController {
 
     var advertisementsArray: [Advertisement] = []
     var ad_height = 170.0
+    var product_height = 260.0
     var tagsArray: [Tag] = []
-        
+    var productsArray: [Product] = []
+    var filteredProductsArray: [Product] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -114,6 +118,12 @@ class ProfileVC: UIViewController {
             }
             if let products = products {
                 print("Products: \(products)")  // Use the fetched products data here.
+                
+                self.productsArray = products
+                self.filteredProductsArray = products
+
+                self.collectionViewProducts.reloadData()
+                
             }
             if let advertisements = advertisements {
                 print("Advertisements: \(advertisements)")  // Use the fetched advertisements data here.
@@ -154,6 +164,20 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func SearchTapped(_ sender: Any) {
+        let searchText = searchTxt.text ?? ""
+        filterProducts(by: searchText)
     }
+
     
+    func filterProducts(by searchText: String) {
+        if searchText.isEmpty {
+            filteredProductsArray = productsArray
+        } else {
+            filteredProductsArray = productsArray.filter { product in
+                return product.name.lowercased().contains(searchText.lowercased())
+            }
+        }
+        collectionViewProducts.reloadData()
+    }
+
 }
