@@ -32,7 +32,9 @@ class Loader {
         
         // Create the "Loading..." label
         let loadingLabel = UILabel()
-        loadingLabel.text = "Loading..."
+ 
+        loadingLabel.text = NSLocalizedString("loading", comment: "")
+        
         loadingLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         loadingLabel.textColor = .gray
         loadingLabel.translatesAutoresizingMaskIntoConstraints = false

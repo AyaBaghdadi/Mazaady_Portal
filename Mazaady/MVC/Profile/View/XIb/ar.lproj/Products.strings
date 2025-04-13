@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "00.00 EGP"; ObjectID = "CUK-pQ-ItP"; */
+"CUK-pQ-ItP.text" = "00.00 ";
+
+/* Class = "UILabel"; text = "Offer Price"; ObjectID = "Ep6-5G-83d"; */
+"Ep6-5G-83d.text" = "سعر العرض";
+
+/* Class = "UILabel"; text = "00.00 EGP"; ObjectID = "Es8-zf-XC7"; */
+"Es8-zf-XC7.text" = "00.00 EGP";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Fya-Vy-YN8"; */
+"Fya-Vy-YN8.text" = "Title";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "G8b-J0-p91"; */
+"G8b-J0-p91.text" = "0";
+
+/* Class = "UILabel"; text = "H"; ObjectID = "NOA-k6-WLo"; */
+"NOA-k6-WLo.text" = "س";
+
+/* Class = "UILabel"; text = "M"; ObjectID = "c5q-Gy-BFC"; */
+"c5q-Gy-BFC.text" = "د";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "g40-dw-NjB"; */
+"g40-dw-NjB.text" = "0";
+
+/* Class = "UILabel"; text = "Lot Starts In"; ObjectID = "jJZ-sw-aQj"; */
+"jJZ-sw-aQj.text" = "تبدأ القرعة في";
+
+/* Class = "UILabel"; text = "D"; ObjectID = "m1j-ou-ACL"; */
+"m1j-ou-ACL.text" = "ي";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "oUr-dr-sJb"; */
+"oUr-dr-sJb.text" = "السعر";
+
+/* Class = "UILabel"; text = "00.00 EGP"; ObjectID = "qx6-4J-jyn"; */
+"qx6-4J-jyn.text" = "00.00 EGP";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "xSg-9G-y4G"; */
+"xSg-9G-y4G.text" = "0";

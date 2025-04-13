@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="CAIRO-BOLD.TTF">
-            <string>Cairo-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Cart-->
         <scene sceneID="yzM-cL-acy">
@@ -319,6 +314,9 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
                                                                 <real key="value" value="40"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="40"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqv-EU-QJ4" customClass="AnimatableView" customModule="IBAnimatable">
@@ -506,7 +504,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="3Cd-dc-sj3">
             <objects>
-                <tabBarController id="3dS-yj-M5J" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarVC" id="3dS-yj-M5J" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qTV-q3-EcL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -662,7 +660,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u47-U4-e09">
                                 <rect key="frame" x="0.0" y="59" width="393" height="433"/>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -688,7 +686,7 @@
                                                             <constraint firstAttribute="height" constant="26" id="i1m-2A-sGK"/>
                                                             <constraint firstAttribute="width" constant="26" id="jPP-fS-t9Q"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="tintColor" name="color_text"/>
                                                         <state key="normal" backgroundImage="xmark" catalog="system">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -732,6 +730,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" name="color_text"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                                <real key="value" value="40"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
@@ -828,7 +829,9 @@
                                             </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6vM-bS-hlD" secondAttribute="trailing" id="JXP-zr-OOb"/>
                                             <constraint firstAttribute="trailing" secondItem="1ZZ-Px-anh" secondAttribute="trailing" id="ZGy-Z4-nJe"/>
+                                            <constraint firstAttribute="trailing" secondItem="vXL-WV-TwH" secondAttribute="trailing" id="e4G-kX-gPi"/>
                                             <constraint firstAttribute="trailing" secondItem="vXL-WV-TwH" secondAttribute="trailing" id="hHz-R6-At9"/>
                                             <constraint firstAttribute="trailing" secondItem="Z5I-KS-tRY" secondAttribute="trailing" id="lag-Pf-HU2"/>
                                         </constraints>
@@ -856,7 +859,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="zA9-iy-yQ6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

@@ -1,0 +1,63 @@
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "1pd-S2-Dia"; */
+"1pd-S2-Dia.placeholder" = "بحث";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "AK5-3D-JW8"; */
+"AK5-3D-JW8.placeholder" = "بحث";
+
+/* Class = "UILabel"; text = "@nme_ccust1996"; ObjectID = "Aau-SH-usa"; */
+"Aau-SH-usa.text" = "@nme_ccust1996";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "E3B-GX-Rdp"; */
+"E3B-GX-Rdp.text" = "0";
+
+/* Class = "UISegmentedControl"; Exu-eQ-NCO.segmentTitles[0] = "Products"; ObjectID = "Exu-eQ-NCO"; */
+"Exu-eQ-NCO.segmentTitles[0]" = "المنتجات";
+
+/* Class = "UISegmentedControl"; Exu-eQ-NCO.segmentTitles[1] = "Reviews"; ObjectID = "Exu-eQ-NCO"; */
+"Exu-eQ-NCO.segmentTitles[1]" = "التقييمات";
+
+/* Class = "UISegmentedControl"; Exu-eQ-NCO.segmentTitles[2] = "Followres"; ObjectID = "Exu-eQ-NCO"; */
+"Exu-eQ-NCO.segmentTitles[2]" = "المتابعون";
+
+/* Class = "UILabel"; text = "Following"; ObjectID = "FrA-4r-dcj"; */
+"FrA-4r-dcj.text" = "تتابع";
+
+/* Class = "UILabel"; text = "العربية"; ObjectID = "GCc-QA-coB"; */
+"GCc-QA-coB.text" = "العربية";
+
+/* Class = "UILabel"; text = "Egypt,Cairo"; ObjectID = "TRl-ta-WJh"; */
+"TRl-ta-WJh.text" = "Egypt,Cairo";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "Ww1-66-Td5"; */
+"Ww1-66-Td5.text" = "المتابعون";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "Xxw-hN-ggl"; */
+"Xxw-hN-ggl.text" = "English";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "YIP-lj-AaB"; */
+"YIP-lj-AaB.text" = "اللغة";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "bCs-H9-iws"; */
+"bCs-H9-iws.text" = "English";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "bbP-0Y-v8R"; */
+"bbP-0Y-v8R.title" = "بحث";
+
+/* Class = "UILabel"; text = "Top Tags"; ObjectID = "dDe-ra-Z4B"; */
+"dDe-ra-Z4B.text" = "أهم العلامات";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "e5S-xU-1hg"; */
+"e5S-xU-1hg.text" = "0";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "kTF-Pd-QBG"; */
+"kTF-Pd-QBG.title" = "حسابي";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "p2w-Ta-fbA"; */
+"p2w-Ta-fbA.title" = "الرئيسية";
+
+/* Class = "UITabBarItem"; title = "Cart"; ObjectID = "qQ1-aW-zgd"; */
+"qQ1-aW-zgd.title" = "السلة";
+
+/* Class = "UILabel"; text = "Customer Nme"; ObjectID = "qQT-2I-Sld"; */
+"qQT-2I-Sld.text" = "Customer Nme";

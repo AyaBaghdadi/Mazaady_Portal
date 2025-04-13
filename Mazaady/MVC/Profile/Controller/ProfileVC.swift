@@ -34,9 +34,21 @@ class ProfileVC: UIViewController {
     var productsArray: [Product] = []
     var filteredProductsArray: [Product] = []
     
+    let currentLanguage = UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first ?? "en"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if currentLanguage == "ar" {
+            
+            languageLbl.text = "العربية"
+
+        } else {
+            
+            languageLbl.text = "English"
+
+        }
+        
         self.AssignXIB()
         
         collectionViewTopTags.collectionViewLayout.invalidateLayout()
