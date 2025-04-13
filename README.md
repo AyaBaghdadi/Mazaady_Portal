@@ -6,8 +6,6 @@ This project is built using Swift and follows the **MVC (Model-View-Controller)*
 
 ---
 
-![Demo Video](demo.mp4)
-
 ## ✨ Features Overview
 
 - 🎨 Custom `UISegmentedControl` with underline animation
