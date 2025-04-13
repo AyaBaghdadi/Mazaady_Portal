@@ -1,126 +1,79 @@
+# Mazaady Task – Profile & Language Screens
 
-# 🧭 Mazaady iOS App – Custom UI with MVC Architecture
+This project is built using the MVC design pattern and includes proper structure, clean separation of concerns, and UI/UX enhancements using external libraries and custom components. The app is also fully localized and well-organized for scalability and maintainability.
 
-This project is built using Swift and follows the **MVC (Model-View-Controller)** architecture. It focuses on clean code organization, reusable components, localization, and enhanced design using custom UI.
+## 🗂 Project Structure
 
----
-
-## ✨ Features Overview
-
-- 🎨 Custom `UISegmentedControl` with underline animation
-- 🧭 Custom `UITabBar` with a centered rounded item and dynamic color handling
-- 🌍 **Localization support** for multi-language (e.g., Arabic/English)
-- 🧩 UI design enhanced using external library for components and animation
-- 🖼 Reusable image loading method with optional loader control
-- 📲 Dynamic product list using `UICollectionView` with custom `.xib` cells
-
----
-
-## 🗂 Project Structure (MVC Pattern)
+### 📡 Network
+Modular and reusable network layer.
 
 ```
-├── Models
-│   └── Product.swift
-│
-├── Views
-│   ├── Components
-│   │   ├── UnderlineSegmentedControl.swift
-│   │   ├── CustomTabBar.swift
-│   │   └── LoaderView.swift
-│   ├── Cells
-│   │   └── ProductCVC.xib
-│
-├── Controllers
-│   ├── Profile
-│   │   └── ProfileViewController.swift
-│   ├── Language
-│   │   └── LanguageViewController.swift
-│
-├── Extensions
-│   ├── UIViewController+Ext.swift
-│   └── UIImageView+LoadImage.swift
-│
-├── Network
-│   ├── APIService.swift
-│   ├── Endpoints.swift
-│   └── NetworkConstants.swift
+Network/
+├── ImageLoad.swift         # Centralized image loading with optional loader
+├── Loader.swift            # Custom loader implementation
+├── NetworkManager.swift    # Handles all network requests
 ```
 
----
+### 🧠 MVC
 
-## 📐 UI/UX Enhancements
+#### 🌐 Language
+The Language screen controller.
 
-- All colors are defined and managed in `Assets.xcassets` using semantic names like `color_main`, `color_text`, etc.
-- Used a **design enhancement library** to improve layout and animation (e.g., `IBAnimatable` or similar)
-- Reusable loader component (`LoaderView.swift`) that can be triggered optionally from image loading or API calls
+```
+MVC/
+└── Language/
+    └── Controller/
+        └── ChangeLanguageVC.swift
+```
 
----
+#### 👤 Profile
+Handles the Profile screen including ads, products, and tags.
+
+```
+MVC/
+└── Profile/
+    ├── Model/
+    │   ├── AdvertisementModel.swift
+    │   ├── ProductsModel.swift
+    │   ├── TagsModel.swift
+    │   └── UserModel.swift
+    │
+    ├── View/
+    │   ├── Customs/
+    │   │   └── CustomSegmentControlDelegate.swift   # Custom segmented control
+    │   ├── Files/
+    │   │   ├── AdsCVC.swift
+    │   │   ├── ProductsCVC.swift
+    │   │   └── TagsCVC.swift
+    │   └── XIB/
+    │       ├── Ads.xib
+    │       ├── Products.xib
+    │       └── Tags.xib
+    │
+    └── Controller/
+        ├── ProfileCollections.swift   # Separated using extensions
+        └── ProfileVC.swift            # Main controller
+```
+
+## 🎨 Design
+
+- Used a third-party library to improve the design
+- All colors are defined inside the `Assets` folder
+- Centralized and reusable image loading functionality
+- Custom segmented control UI and styled tab bar
+- UI components built using `.xib` files for modularity and reuse
 
 ## 🌍 Localization
 
-- Full localization support using `.strings` files
-- Dynamic language switching available inside the **Language** section
-- Separated folder for language feature for easier maintenance
+- App fully supports localization
+- Language switch functionality built using `ChangeLanguageVC.swift`
 
----
+## ✅ Clean Code Practices
 
-## 📤 Networking
+- ViewControllers separated using extensions
+- Clear MVC architecture
+- Folder separation for better organization
 
-- All networking logic separated in a dedicated folder
-- Clean structure for:
-  - `APIService` – core request logic
-  - `Endpoints` – enum for all backend endpoints
-  - `NetworkConstants` – base URL and other constants
+## ✨ Author
 
----
-
-## 🖼 Image Handling
-
-- Custom `UIImageView` extension with the following method:
-
-```swift
-imageView.loadImage(from: url, showLoader: true)
-```
-
-- Automatically handles optional loader and async image caching
-
----
-
-## 🧩 Custom Components
-
-### 🔘 UnderlineSegmentedControl
-
-- Inherits from `UISegmentedControl`
-- Adds an underline to indicate selected segment
-- Uses clear background and custom color attributes
-
-### 🧭 CustomTabBar
-
-- Includes 5 items:
-  - Items 1, 2, 4, 5 have icon + label
-  - Center item (item 3) is icon only, rounded, and colored with `color_main`
-
----
-
-## 🧪 Tech Stack
-
-- Swift
-- UIKit
-- MVC Pattern
-- Storyboards + `.xib`
-- Auto Layout
-- Localization
-- External UI Library (for design)
-- URLSession / Codable
-
----
-
-## 🧑‍💻 Developer
-
-Built with ❤️ by **Aya Baghdadi**  
-- Organized.
-- Localized.
-- Clean MVC.
-- UI-focused.
-
----
+Aya Baghdadi
