@@ -28,8 +28,8 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var searchTxt: UITextField!
 
     var advertisementsArray: [Advertisement] = []
-    var ad_height = 170.0
-    var product_height = 260.0
+    var ad_height = 190.0
+    var product_height = 230.0
     var tagsArray: [Tag] = []
     var productsArray: [Product] = []
     var filteredProductsArray: [Product] = []
@@ -41,6 +41,7 @@ class ProfileVC: UIViewController {
         
         collectionViewTopTags.collectionViewLayout.invalidateLayout()
         collectionViewTopTags.layoutIfNeeded()
+        
     }
     
     
@@ -145,7 +146,7 @@ class ProfileVC: UIViewController {
                 }
                 
                 self.customerNmeLbl.text = user.name
-                self.customerMailLbl.text = user.userName // Or use user.email if available
+                self.customerMailLbl.text = "@\(user.userName)" // Or use user.email if available
                 self.customerAddressLbl.text = "\(user.cityName), \(user.countryName)"
                 self.followingLbl.text = "\(user.followingCount)"
                 self.followersLbl.text = "\(user.followersCount)"

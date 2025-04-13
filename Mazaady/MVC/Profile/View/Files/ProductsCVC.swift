@@ -10,6 +10,7 @@ import IBAnimatable
 
 class ProductsCVC: UICollectionViewCell {
     
+    @IBOutlet weak var normalPriceViewCell: UIStackView!
     @IBOutlet weak var MCell: UILabel!
     @IBOutlet weak var Hcell: UILabel!
     @IBOutlet weak var Dcell: UILabel!
@@ -20,6 +21,6 @@ class ProductsCVC: UICollectionViewCell {
     @IBOutlet weak var priceCell: UILabel!
     @IBOutlet weak var titleCell: UILabel!
     @IBOutlet weak var imageCell: AnimatableImageView!
-    
+
 
 }

@@ -64,8 +64,10 @@ extension ProfileVC : UICollectionViewDataSource , UICollectionViewDelegate , UI
             cell.offerPriceCell.text = "\(product.price)"
             if product.offer == nil {
                 cell.offerViewCell.isHidden = true
+                cell.normalPriceViewCell.isHidden = false
             }else{
                 cell.offerViewCell.isHidden = false
+                cell.normalPriceViewCell.isHidden = true
             }
 
             if let remainingSeconds = product.endDate {
