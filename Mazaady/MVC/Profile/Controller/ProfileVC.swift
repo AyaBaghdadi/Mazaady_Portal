@@ -162,7 +162,21 @@ class ProfileVC: UIViewController {
 
 
     @IBAction func ChangeLanguageTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "ChangeLanguageVC") as? ChangeLanguageVC,
+              let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+
+        vc.view.frame = window.bounds
+        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+
+        UIView.transition(with: window, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+            window.rootViewController?.addChild(vc)
+            window.addSubview(vc.view)
+        }, completion: { _ in
+            vc.didMove(toParent: window.rootViewController)
+        })
     }
+
     
     @IBAction func SearchTapped(_ sender: Any) {
         let searchText = searchTxt.text ?? ""
