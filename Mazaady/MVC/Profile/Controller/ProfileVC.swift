@@ -51,8 +51,6 @@ class ProfileVC: UIViewController {
         
         self.AssignXIB()
         
-        collectionViewTopTags.collectionViewLayout.invalidateLayout()
-        collectionViewTopTags.layoutIfNeeded()
         
     }
     
