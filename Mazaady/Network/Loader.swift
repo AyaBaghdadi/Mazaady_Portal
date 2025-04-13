@@ -26,7 +26,7 @@ class Loader {
         NSLayoutConstraint.activate([
             logoImageView.centerXAnchor.constraint(equalTo: loaderView.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: loaderView.centerYAnchor, constant: -40),
-            logoImageView.widthAnchor.constraint(equalToConstant: 250), // Increased size
+            logoImageView.widthAnchor.constraint(equalToConstant: 300), // Increased size
             logoImageView.heightAnchor.constraint(equalToConstant: 150) // Increased size
         ])
         

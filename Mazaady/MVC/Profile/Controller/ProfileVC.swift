@@ -19,17 +19,24 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var customerMailLbl: UILabel!
     @IBOutlet weak var customerAddressLbl: UILabel!
     
+    @IBOutlet weak var adsHeight: NSLayoutConstraint!
     @IBOutlet weak var collectionViewProducts: UICollectionView!
     @IBOutlet weak var collectionViewTopTags: UICollectionView!
-    
-    @IBOutlet weak var searchTxt: UITextField!
-    
-    @IBOutlet weak var ad1Img: UIImageView!
-    @IBOutlet weak var ad2Img: UIImageView!
+    @IBOutlet weak var collectionViewAds: UICollectionView!
 
+    @IBOutlet weak var searchTxt: UITextField!
+
+    var advertisementsArray: [Advertisement] = []
+    var ad_height = 170.0
+    var tagsArray: [Tag] = []
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.AssignXIB()
+        
+        collectionViewTopTags.collectionViewLayout.invalidateLayout()
+        collectionViewTopTags.layoutIfNeeded()
     }
     
     
@@ -99,12 +106,24 @@ class ProfileVC: UIViewController {
             // All requests are finished, handle the data here.
             if let tags = tags {
                 print("Tags: \(tags)")  // Use the fetched tags data here.
+                
+                self.tagsArray = tags
+                
+                self.collectionViewTopTags.reloadData()
+                
             }
             if let products = products {
                 print("Products: \(products)")  // Use the fetched products data here.
             }
             if let advertisements = advertisements {
                 print("Advertisements: \(advertisements)")  // Use the fetched advertisements data here.
+                
+                // Store the advertisements in the array
+                self.advertisementsArray = advertisements
+                
+                // Reload the collection view to display advertisements
+                self.collectionViewAds.reloadData()
+                
             }
             if let user = user {
                 print("User: \(user)")  // Use the fetched user data here.

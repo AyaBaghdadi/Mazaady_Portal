@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jni-oC-92L" customClass="AdsCVC" customModule="Mazaady" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Bb-ek-MMr">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV7-gp-kqe">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="182"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-1N-qUf">
+                                <rect key="frame" x="12" y="4" width="377" height="174"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-Ah-3jT">
+                                <rect key="frame" x="190.66666666666666" y="81" width="20" height="20"/>
+                                <color key="tintColor" name="color_main"/>
+                                <color key="color" name="color_main"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kIp-1N-qUf" firstAttribute="top" secondItem="EV7-gp-kqe" secondAttribute="top" constant="4" id="J98-Di-Oom"/>
+                            <constraint firstItem="ND8-Ah-3jT" firstAttribute="centerX" secondItem="EV7-gp-kqe" secondAttribute="centerX" id="TqG-J8-iaa"/>
+                            <constraint firstItem="ND8-Ah-3jT" firstAttribute="centerY" secondItem="EV7-gp-kqe" secondAttribute="centerY" id="iXh-Tv-Xy9"/>
+                            <constraint firstItem="kIp-1N-qUf" firstAttribute="leading" secondItem="EV7-gp-kqe" secondAttribute="leading" constant="12" id="kMR-mM-d5H"/>
+                            <constraint firstAttribute="bottom" secondItem="kIp-1N-qUf" secondAttribute="bottom" constant="4" id="kre-mP-ZVJ"/>
+                            <constraint firstAttribute="trailing" secondItem="kIp-1N-qUf" secondAttribute="trailing" constant="12" id="yJj-rU-XPD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EV7-gp-kqe" firstAttribute="leading" secondItem="5Bb-ek-MMr" secondAttribute="leading" id="cAb-kI-dFj"/>
+                    <constraint firstAttribute="trailing" secondItem="EV7-gp-kqe" secondAttribute="trailing" id="ehx-Kv-tAJ"/>
+                    <constraint firstItem="EV7-gp-kqe" firstAttribute="top" secondItem="5Bb-ek-MMr" secondAttribute="top" id="kwI-r1-plB"/>
+                    <constraint firstAttribute="bottom" secondItem="EV7-gp-kqe" secondAttribute="bottom" id="xgu-O2-OoB"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="401" height="182"/>
+            <connections>
+                <outlet property="imageCell" destination="kIp-1N-qUf" id="Oj2-2L-k43"/>
+                <outlet property="loader" destination="ND8-Ah-3jT" id="JMB-HC-5Sa"/>
+            </connections>
+            <point key="canvasLocation" x="310.68702290076334" y="18.30985915492958"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="color_main">
+            <color red="0.82400000095367432" green="0.024000000208616257" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
